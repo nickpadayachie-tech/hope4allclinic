@@ -1969,6 +1969,11 @@ ul, ol {
     display: none;
   }
 
+  .contact-hours,
+  .footer-col:has(#footer-hours-table) {
+    display: none;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
