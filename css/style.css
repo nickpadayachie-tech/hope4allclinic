@@ -778,16 +778,6 @@ ul, ol {
   border-color: transparent;
 }
 
-.service-card-img {
-  width: calc(100% + 2 * var(--space-xl));
-  margin: calc(-1 * var(--space-xl)) calc(-1 * var(--space-xl)) var(--space-lg);
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  border: 1px solid rgba(11,29,58,0.06);
-  border-bottom: none;
-}
-
 .service-icon {
   width: 52px;
   height: 52px;
