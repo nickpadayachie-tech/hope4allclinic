@@ -1905,6 +1905,15 @@ ul, ol {
     text-align: center;
   }
 
+  .about-text .about-features {
+    justify-items: center;
+    width: 100%;
+  }
+
+  .about-feature {
+    width: min(100%, 440px);
+  }
+
   .about-text {
     text-align: center;
   }
