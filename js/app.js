@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAboutFeatures();
   renderBooking();
   renderFAQ();
-  renderStructuredData();
   highlightToday();
 });
 
@@ -419,78 +418,4 @@ function renderFAQ() {
       answer.style.maxHeight = !isOpen ? answer.scrollHeight + "px" : null;
     });
   });
-}
-
-/* ---------- Structured Data (JSON-LD) ---------- */
-function renderStructuredData() {
-  const todayIdx = dayIndex(new Date().getDay());
-  const todayEntry = CLINIC_HOURS[todayIdx];
-
-  const openingHoursSpecification = CLINIC_HOURS.map((entry) => {
-    const dayMap = {
-      Monday: "Monday",
-      Tuesday: "Tuesday",
-      Wednesday: "Wednesday",
-      Thursday: "Thursday",
-      Friday: "Friday",
-      Saturday: "Saturday",
-      Sunday: "Sunday",
-    };
-    if (entry.open === null) {
-      return {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: dayMap[entry.day],
-        opens: null,
-        closes: null,
-      };
-    }
-    return {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: dayMap[entry.day],
-      opens: entry.open,
-      closes: entry.close,
-    };
-  }).filter((spec) => spec.opens !== null);
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    name: CLINIC_NAME,
-    description: `${CLINIC_NAME} — ${CLINIC_TAGLINE}`,
-    url: window.location.href,
-    sameAs: [CLINIC_SOCIAL.facebook, CLINIC_SOCIAL.medpages],
-    telephone: CLINIC_CONTACT.phone,
-    email: CLINIC_CONTACT.email,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "405 Long Road",
-      addressLocality: "Doorn, Welkom",
-      addressCountry: "ZA",
-    },
-    medicalSpecialty: [
-      "PrimaryCare",
-      "OccupationalTherapy",
-      "Pediatrics",
-      "Obstetrics",
-    ],
-    availableService: [
-      "Drip Therapy",
-      "Pre-Employment Medicals",
-      "Primary Healthcare",
-      "Child Health",
-      "Women's Health",
-      "Men's Health",
-      "Chronic Disease Management",
-      "Antenatal Care",
-      "Postnatal Care",
-      "Sonar Scans",
-    ],
-    openingHoursSpecification: openingHoursSpecification,
-    priceRange: "$$",
-  };
-
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.textContent = JSON.stringify(structuredData, null, 2);
-  document.head.appendChild(script);
 }
