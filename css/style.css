@@ -1950,6 +1950,14 @@ ul, ol {
     display: none;
   }
 
+  .hours-table td {
+    padding: 0.85rem var(--space-md);
+  }
+
+  .hours-table td:last-child {
+    white-space: nowrap;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
   }
