@@ -203,6 +203,7 @@ function renderServiceCards() {
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
       title: "Drip Therapy",
       desc: "Professional intravenous therapy administered by qualified healthcare practitioners.",
+      image: "drip.png",
       items: [],
     },
     {
@@ -241,6 +242,7 @@ function renderServiceCards() {
     }
 
     card.innerHTML = `
+      ${service.image ? `<img class="service-card-img" src="${service.image}" alt="${service.title}" loading="lazy">` : ""}
       <div class="service-icon">${service.icon}</div>
       <h3>${service.title}</h3>
       <p>${service.desc}</p>
