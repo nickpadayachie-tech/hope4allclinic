@@ -9,7 +9,7 @@ const CLINIC_HOURS = [
   { day: "Tuesday",   open: "08:00", close: "17:00" },
   { day: "Wednesday", open: "08:00", close: "17:00" },
   { day: "Thursday",  open: "08:00", close: "17:00" },
-  { day: "Friday",    open: "08:00", close: "17:00" },
+  { day: "Friday",    open: "08:00", close: "15:00" },
   { day: "Saturday",  open: null,    close: null    },
   { day: "Sunday",    open: "08:30", close: "13:00" },
 ];
@@ -39,9 +39,10 @@ const CLINIC_ACRONYMS = {
 // ----- Services (used in the marquee ticker) -----
 const CLINIC_SERVICES = [
   "Drip Therapy",
-  "Pre-Employment Medicals",
+  "Employment Medical Fitnesses",
   "Periodic Medicals",
   "Follow-Up Medicals",
+  "Exit Medicals",
   "Primary Healthcare",
   "Child Health",
   "Women's Health (Contraceptives)",
@@ -60,11 +61,12 @@ const CLINIC_BOOKING_SERVICES = [
     services: ["General Drip Therapy"],
   },
   {
-    group: "Pre-Employment & Occupational Medicals",
+    group: "Employment Medical Fitnesses",
     services: [
-      "Pre-Employment Medical",
+      "Employment Medical Fitness",
       "Periodic Medical",
       "Follow-Up Medical",
+      "Exit Medical",
     ],
   },
   {
@@ -104,19 +106,19 @@ const CLINIC_SOCIAL = {
 const CLINIC_FAQS = [
   {
     q: "What services does Hope4All Clinic offer?",
-    a: "We offer drip therapy, pre-employment, periodic and follow-up medicals, primary healthcare (child health, women's and men's health, chronic consultations, minor ailments), antenatal and postnatal care, sonar scans and basic tests.",
+    a: "We offer drip therapy, employment medical fitnesses, periodic and follow-up medicals, primary healthcare (child health, women's and men's health, chronic consultations, minor ailments), antenatal and postnatal care, sonar scans and basic tests.",
   },
   {
     q: "What is drip therapy and who can benefit from it?",
     a: "Drip therapy delivers vitamins, fluids and medication directly into the bloodstream for faster absorption. It is useful for dehydration, fatigue, immune support and recovery. Our professional team will assess whether it is suitable for you.",
   },
   {
-    q: "What is included in a pre-employment medical?",
-    a: "A pre-employment medical checks whether a candidate is fit to perform the job. It typically includes a health questionnaire, physical examination and basic tests required by the employer, as well as periodic and follow-up medicals for ongoing occupational health.",
+    q: "What is included in an employment medical fitness?",
+    a: "An employment medical fitness checks whether a candidate is fit to perform the job. It typically includes a health questionnaire, physical examination and basic tests required by the employer, as well as periodic and follow-up medicals for ongoing occupational health, as well as exit medicals.",
   },
   {
     q: "What is the difference between periodic and follow-up medicals?",
-    a: "Periodic medicals are regular occupational health check-ups done at set intervals for people in specific jobs. Follow-up medicals are done over time to monitor a known condition, injury or exposure, ensuring it is managed properly.",
+    a: "Periodic medicals are regular occupational health check-ups done at set intervals for people in specific jobs. Follow-up medicals are done over time to monitor a known condition, injury or exposure, ensuring it is managed properly. Exit medicals are conducted when employees leave a job to assess fitness for departure.",
   },
   {
     q: "Do you offer women's health and contraceptive services?",
@@ -124,7 +126,7 @@ const CLINIC_FAQS = [
   },
   {
     q: "Do you offer men's health services including circumcision?",
-    a: "Yes. We offer men's health consultations, including medical adult and adolescent circumcision performed professionally with proper aftercare guidance.",
+    a: "Yes. We offer men's health consultations, including medical adult and adolescent circumcision performed professionally with proper aftercare guidance, as well as prostate cancer screening and male hormone boost therapy.",
   },
   {
     q: "Can I book a sonar scan without a referral?",
@@ -144,7 +146,7 @@ const CLINIC_FAQS = [
   },
   {
     q: "What are your opening hours?",
-    a: "Monday to Friday: 08:00 – 17:00, Saturday: closed, Sunday: 08:30 – 13:00. We are registered practitioners with a valid practice number, SANC and SASOHN accreditation.",
+    a: "Monday to Friday: 08:00 – 15:00, Saturday: closed, Sunday: 08:30 – 13:00. We are registered practitioners with a valid practice number, SANC and SASOHN accreditation.",
   },
 ];
 

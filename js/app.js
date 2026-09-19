@@ -195,6 +195,8 @@ function renderServiceCards() {
         "Child health services",
         "Women's health & contraceptives",
         "Men's health including circumcision",
+        "Prostate cancer screening",
+        "Male hormone boost therapy",
         "Chronic disease consultations",
         "Minor ailments treatment",
       ],
@@ -202,17 +204,25 @@ function renderServiceCards() {
     {
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>`,
       title: "Drip Therapy",
-      desc: "Professional intravenous therapy administered by qualified healthcare practitioners.",
-      items: [],
+      desc: "Professional IV drip therapy delivers fluids, vitamins, and nutrients under qualified practitioner supervision following individual health assessments.",
+      items: [
+        "IV hydration therapy",
+        "Vitamin and nutrient infusions",
+        "Individualised treatment assessment",
+        "Professional monitoring during treatment",
+      ],
     },
-    {
+{
       icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>`,
-      title: "Pre-Employment Medicals",
+      title: "Employment Medical Fitnesses",
       desc: "Thorough occupational health assessments for employers and employees.",
       items: [
-        "Pre-employment medicals",
-        "Periodic medicals",
-        "Follow-up medicals",
+        "Health Risk Assessment",
+        "Employment medical fitness",
+        "Pre-employment medical",
+        "Periodic medical",
+        "Follow-up medical",
+        "Exit medical",
       ],
     },
     {
@@ -224,6 +234,17 @@ function renderServiceCards() {
         "Postnatal care",
         "Sonar scans",
         "Basic tests",
+      ],
+    },
+    {
+      icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 29c0-2 3-3.5 3-5.5s-3-3.5-3-5.5c0-2 3-3.5 3-5.5s3 3.5 3 5.5c0 2-3 3.5-3 5.5zM3 23c0-1.5 2-2.5 3-2s3 .5 3 2s-3 2.5-3 5.5zM12 5c0-1.5 1.5-3 3-3s3 1.5 3 3c0 1.5-1.5 3-3 3s-3-1.5-3-3zM19 5c0-1.5-1.5-3-3-3s-3 1.5-3 3c0 1.5 1.5 3 3 3s3-1.5 3-3z"/></svg>`,
+      title: "Investigations",
+      desc: "Diagnostic tests and screenings",
+      items: [
+        "Blood tests",
+        "STI tests",
+        "Urine and Sputum tests",
+        "Pap smears",
       ],
     },
   ];
