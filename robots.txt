@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nickpadayachie-tech.github.io/hope4allclinic/sitemap.xml
+Sitemap: https://hope4allclinic.co.za/sitemap.xml
